@@ -10,7 +10,8 @@ printf("\nVoce se depara com uma enorme porta de pedra.\n");
     printf("Simbolos antigos cobrem as paredes ao redor dela.\n");
     printf("Uma voz ecoa: 'Decifre o codigo das runas e a cripta se abrira...'\n\n");
 
-
+srand(time(0));
+    int codigo = rand() % 41 + 10; 
 
 
 }
