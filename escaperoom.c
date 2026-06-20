@@ -24,5 +24,12 @@ printf("=== AS RUNAS REVELAM ===\n");
 
     printf("- O codigo esta entre 10 e 50\n\n");
 
+
+int tentativa;
+    printf("Insira o codigo das runas: ");
+    scanf("%d", &tentativa);
+
+
+
     return 0;
 }
