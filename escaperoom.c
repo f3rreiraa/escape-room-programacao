@@ -25,20 +25,28 @@ printf("=== AS RUNAS REVELAM ===\n");
     printf("- O codigo esta entre 10 e 50\n\n");
 
 
-int tentativa;
-    printf("Insira o codigo das runas: ");
-    scanf("%d", &tentativa);
+int tentativas = 3;
+    int tentativa;
 
+    while (tentativas > 0) {
+        printf("Tentativas restantes: %d\n", tentativas);
+        printf("Insira o codigo das runas: ");
+        scanf("%d", &tentativa);
 
-if (tentativa == codigo) {
-        printf("\nAs runas brilham! A porta de pedra se abre lentamente...\n");
-        printf("Voce adentra a Cripta do Rei Esquecido.\n");
-    } else if (tentativa < codigo) {
-        printf("\nAs runas piscam em vermelho. O codigo e maior.\n");
-    } else {
-        printf("\nAs runas piscam em vermelho. O codigo e menor.\n");
+        if (tentativa == codigo) {
+            printf("\nAs runas brilham! A porta de pedra se abre lentamente...\n");
+            printf("Voce adentra a Cripta do Rei Esquecido.\n");
+            return 0;
+        } else if (tentativa < codigo) {
+            printf("As runas piscam. O codigo e maior.\n\n");
+        } else {
+            printf("As runas piscam. O codigo e menor.\n\n");
+        }
+        tentativas--;
     }
 
+    printf("\nAs runas se apagam. A magia te expulsa da cripta.\n");
+    printf("O codigo era %d. A cripta permanece selada.\n", codigo);
 
     return 0;
 }
