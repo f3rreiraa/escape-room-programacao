@@ -30,6 +30,15 @@ int tentativa;
     scanf("%d", &tentativa);
 
 
+if (tentativa == codigo) {
+        printf("\nAs runas brilham! A porta de pedra se abre lentamente...\n");
+        printf("Voce adentra a Cripta do Rei Esquecido.\n");
+    } else if (tentativa < codigo) {
+        printf("\nAs runas piscam em vermelho. O codigo e maior.\n");
+    } else {
+        printf("\nAs runas piscam em vermelho. O codigo e menor.\n");
+    }
+
 
     return 0;
 }
