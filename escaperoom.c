@@ -32,6 +32,13 @@ int main() {
 
         while (tentativas > 0) {
             printf("Tentativas restantes: %d\n", tentativas);
+            if (tentativas == 1) {
+            printf("*** AVISO: Ultima tentativa! ***\n");
+            if (codigo % 10 >= 5)
+                printf("Dica final: O algarismo final e maior ou igual a 5.\n");
+            else
+                printf("Dica final: O algarismo final e menor que 5.\n");
+        }
             printf("Insira o codigo das runas: ");
             scanf("%d", &tentativa);
 
